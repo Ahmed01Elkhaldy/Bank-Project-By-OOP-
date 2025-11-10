@@ -321,5 +321,22 @@ return true;
         return ClsBankClient(enMode::AddNewClientMode
             , "", "", "", "", AccNumber, "",0);
     }
+  void Deposit(float Amount)
+{
+      _AccountBalance += Amount;
+      Save();
+}
+  bool Wihtdraw(float Amount)
+{
+      if (Amount > _AccountBalance)
+      {
+          return false;
+      }
+      else
+      {
+      _AccountBalance -= Amount;
+      Save();
+      }
+}
 };
 

@@ -13,10 +13,8 @@ int main()
 
 	while(true)
 	{
-		
-		if (!ClsLoginScreen::ShowLoginScreen())
-			break;
- 	}
+	  ClsLoginScreen::ShowLoginScreen())
+	}
 	
 
 
@@ -26,3 +24,4 @@ int main()
 	
 	system("pause");
 }
+

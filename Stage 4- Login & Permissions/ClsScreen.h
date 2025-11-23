@@ -17,9 +17,7 @@ protected:
         }
         cout << "\n\t\t\t\t\t_________________________________________\n";
   
-        cout << "\n\t\t\t\t\t User Name : " << CurrentUser.UserName ;
-        cout << "\t\t\t\t\t Date Login Is: " << ClsDate::DateToString(ClsDate());
-        
+                
         cout << "\n\n";
     }
     static bool CheckPermissionRight(ClsUser::enPermissions Permission)
@@ -39,4 +37,5 @@ protected:
         }
     }
 };
+
 

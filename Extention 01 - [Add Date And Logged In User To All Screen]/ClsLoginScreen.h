@@ -10,7 +10,7 @@ using namespace std;
 class ClsLoginScreen : protected ClsScreen
 {
 private:
-	static bool _Login()
+	static void _Login()
 	{
 
 		string UserName, Password;
@@ -22,17 +22,9 @@ private:
 		
 		if (FaildLogin)
 		{
-		  Counter++;
-
-		  cout << "\nInvalid Data, Enter Again \n";
-		  
-		  cout << "You Have " << 3 - Counter << " Trials To Login\n\n";
+		    cout << "\nInvalid Data, Enter Again \n";
 		}
-		if (Counter == 3)
-		{
-			cout << "\nYour Locked After 3 Faild Trials\n";
-			return false;
-		}
+		
 
 		cout << "Enter Username: ";
 		cin >> UserName;
@@ -45,18 +37,18 @@ private:
 		FaildLogin = CurrentUser.ISEmpty();
 		
 	
-	} while (FaildLogin );
+	} while (FaildLogin);
 	
 	ClsMainScreen::ShowMainMenueScreen();
-	return true;
 	}
 
 public:
 
-	static bool ShowLoginScreen()
+	static void ShowLoginScreen()
 	{
 		_DrawScreenHeader("\tLogin Screen");
-		return _Login();
+		_Login();
 	}
 };
+
 
